@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 *,
 *::after,
 *::before {
@@ -10,7 +10,7 @@
 
 html {
   font-size: 16px;
-  font-family:   "Oswald", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 :root {
@@ -26,12 +26,12 @@ html {
   --gold: rgba(255, 215, 0, 1);
   --charcoal: rgba(54, 69, 79, 1);
   --Periwinkle: rgba(204, 204, 255, 1);
-  --tan:  rgba(210, 180, 140, 1);
+  --tan: rgba(210, 180, 140, 1);
   --fuchisa: rgba(255, 0, 255, 1);
   --Green: rgba(0, 128, 0, 1);
   --navy: rgba(0, 0, 128, 1);
- --Light-Gray:rgba(217, 217, 214, 1);
- --Blush: rgba(255, 182, 193, 1);
+  --Light-Gray: rgba(217, 217, 214, 1);
+  --Blush: rgba(255, 182, 193, 1);
   --burnt-orange: rgba(255, 69, 0, 1);
   --light-Blue: rgba(173, 216, 230, 1);
   --purple-color: rgba(128, 0, 128, 1);
@@ -47,7 +47,8 @@ body {
   justify-content: space-around;
   align-items: center;
   background: var(--yellow-color);
-margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+  border-bottom: solid 4px var(--black-color);
   padding: 0 0.85rem;
 }
 
@@ -56,7 +57,7 @@ margin-bottom: 10px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
- background: var(--yellow-color);
+  background: var(--yellow-color);
 }
 
 .menu {
@@ -78,7 +79,7 @@ margin-bottom: 10px;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding-right: 25rem ;
+  padding-right: 25rem;
   padding-top: 0.3rem;
   color: var(--black-color);
 }
@@ -103,9 +104,9 @@ margin-bottom: 10px;
 }
 
 .menu li a:hover {
-    box-shadow: 0 -5px 0px #fff inset, 500px 0 0 rgba(255,185,155,0.23) inset;
-     padding: 23px 23px 20px 20px;
-     line-height: 2;
+  box-shadow: 0 -5px 0px #fff inset, 500px 0 0 rgba(255, 185, 155, 0.23) inset;
+  padding: 23px 23px 20px 20px;
+  line-height: 2;
 }
 
 /* hamburger start */
@@ -164,8 +165,6 @@ margin-bottom: 10px;
   background: transparent;
 }
 
-
-
 .navigation input:checked ~ .hamburger::before {
   transform: rotate(-45deg);
   top: 0;
@@ -179,12 +178,11 @@ margin-bottom: 10px;
 }
 
 .navigation input:checked ~ .menu {
-    right: 0;
-    box-shadow: -20px 0 40px rgba(0,0,0,0.3);
+  right: 0;
+  box-shadow: -20px 0 40px rgba(0, 0, 0, 0.3);
 }
 
-
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1440px) {
   .big-mac {
     display: flex;
     flex-direction: column;
@@ -192,15 +190,11 @@ margin-bottom: 10px;
     align-content: center;
   }
 
- .big-mac  .logo {
-  padding: 1rem 0 0 3rem;
-  margin: 1rem ;
- }
-
+  .big-mac .logo {
+    padding: 1rem 0 0 3rem;
+    margin: 1rem;
+  }
 }
-
-
-
 
 @media screen and (max-width: 992px) {
   .hamburger,
@@ -208,17 +202,14 @@ margin-bottom: 10px;
     display: block;
   }
 
+  .big-mac {
+    display: flex;
+    flex-direction: row;
+  }
 
-
-.big-mac {
-  display: flex;
-  flex-direction: row;
-}
-
-.header {
+  .header {
     padding: 10px 10px;
-
-}
+  }
 
   .menu {
     justify-content: start;
@@ -231,7 +222,6 @@ margin-bottom: 10px;
     width: 300px;
     height: 100%;
     padding-top: 68px;
-  
   }
 
   .menu li {
@@ -248,58 +238,75 @@ margin-bottom: 10px;
 }
 
 .hero-section {
-margin: 0 0.5rem 1rem 0.5rem;
-height: 41.95rem;
-/* background-image: url(../img/shipping.svg);
-background-color: var(--yellow-color);
-background-blend-mode: multiply;
-background-repeat: no-repeat;
-background-position: center; */
-
-
-position: relative;
-
+  background-image: url(../img/shipping.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+  height: 42.95rem;
+  position: relative;
+  border-bottom: solid 4px var(--black-color);
+ 
 }
 
-.hero-background {
- filter: blur(2.09px);
-/*border-radius: 2rem;
-margin: 0 auto; */
-/* position: absolute; */
-position: relative;
-}
 
-.main-text {
-  /* height: 28rem;
-  width: 750px;
-  margin-top: 20rem;
-  font-family: "Roboto Slab", serif; */
+
+.hero-section .main-text {
+  max-width: 60rem;
+  bottom: 0.5rem;
+  overflow: hidden;
   position: absolute;
-  top: 0;
-  /* width: fit-content; */
+  font-family: "Roboto Slab", serif;
+  border: solid 0.4px #dd5c;
+  border-radius: 11px 14px;
+  background-color: rgba(153, 145, 27, 0.41);
+  bottom: 11.8rem ;
+  left: 3.5rem;
   
 }
 
+
+.color-overlay {
+ 
+}
+
 .main-text h1 {
-  font-size: 2rem;
-  text-transform:uppercase;
-  color: var(--burnt-orange);
-   /* padding: 1rem 0 0 9rem; */
-   
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--red-color);
+  padding: 0 0 6.6rem 5.5rem;
+  max-width: 50vw;
 }
 
 .main-text p {
-  font-size: 1.01rem;
-  /* display: block; */
+  font-size: 1.51rem;
   text-transform: uppercase;
- border: 2px solid rgba(255, 255, 255, 0.2);
-font-weight: 500;
- border-radius: 1rem;
- background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
- backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
-  color: var(--Periwinkle);
- width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+  border-radius: 11px 14px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+  color: var(--Green);
+  max-width: 50vw;
+  padding: 0 4rem 0 1rem;
 }
+
+
+.color-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.1293767507002801) 33%, rgba(252,176,69,1) 100%);
+
+}
+
+
 
 .service-list {
   display: flex;
@@ -307,49 +314,40 @@ font-weight: 500;
   justify-content: space-around;
   background-color: var(--black-color);
   background-repeat: no-repeat;
-  margin: 1rem 1.5rem 1rem 1.5rem ;
+  margin: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 1em;
+ 
 }
 
-.global-delivery img, .shopping-experience img, .customer-support img {
+.global-delivery img,
+.shopping-experience img,
+.customer-support img {
   height: 3.5rem;
-
 }
 
 .shopping-experience {
-    border: #fff;
-    background-color: rgba(25, 24, 24, 1);
-    border-radius: 1.9rem;
-    cursor: pointer;
-    
+  border: #fff;
+  background-color: rgba(25, 24, 24, 1);
+  border-radius: 1.9rem;
+  cursor: pointer;
 }
 
- .global-delivery ,.customer-support {
+.global-delivery,
+.customer-support {
   border: #fff;
   background-color: rgba(239, 236, 235, 1);
   border-radius: 1.9rem;
   cursor: pointer;
-
 }
-
-
-
-
-
-
-
-
-
-
 
 .hero-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   height: 30.05rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .coal-card {
@@ -359,12 +357,19 @@ font-weight: 500;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  border-radius: 3rem;
+  border-radius: 11px 14px;
+ height: 540px;
+ margin: 0.5px;
+ max-width: 408px;
 }
 
-.card-img-section .hover-img  {
-  position: absolute;
-  
+.coal-card .coal-img {
+  height: 100vh;
+}
+
+
+.coal-img-section {
+  width: 100%;
 }
 
 .honey-card {
@@ -374,19 +379,20 @@ font-weight: 500;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  border-radius: 3rem;
+  border-radius: 11px 14px;
+  height: 540px;
+  overflow: hidden;
+  margin: 0.5px;
+  max-width: 408px;
 }
-
 
 .honey-img-section .honey-img {
-height: 19.9rem;
-width: 30.9rem;
-
+  height: 540px;
+  max-width: 408px;
+  /* max-width: 28.9rem; */
 }
 
-
-
- .Palm-oil-card {
+.Palm-oil-card {
   display: flex;
   flex-direction: column;
   background-color: rgba(234, 23, 1, 1);
@@ -394,22 +400,17 @@ width: 30.9rem;
   background-position: center;
   position: relative;
   overflow: hidden;
-  border-radius: 3rem;
-  filter: blur(0.50px);
+  border-radius: 11px 14px;
+  filter: blur(0.5px);
+  max-width: 400px;
+  margin: 0.5px;
+  height: 540px;
 }
 
+.oil-img {
 
- .oil-img {
-  height: 19.9rem;
-  width: 30.9rem;
+  height: 540px;
+  max-width: 408px;
+  /* height: 19.9rem;
+  width: 28.9rem; */
 }
-
-
- 
-
-
-
-
-
-
-
