@@ -196,47 +196,6 @@ body {
   }
 }
 
-@media screen and (max-width: 992px) {
-  .hamburger,
-  .toggle-menu {
-    display: block;
-  }
-
-  .big-mac {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .header {
-    padding: 10px 10px;
-  }
-
-  .menu {
-    justify-content: start;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    background: var(--gray-color);
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100%;
-    padding-top: 68px;
-  }
-
-  .menu li {
-    width: 100%;
-  }
-
-  .menu li a,
-  .menu li a:hover {
-    padding: 30px;
-    font-size: 24px;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
-    inset: 0;
-  }
-}
-
 .hero-section {
   background-image: url(../img/shipping.svg);
   background-size: cover;
@@ -246,10 +205,11 @@ body {
   height: 42.95rem;
   position: relative;
   border-bottom: solid 4px var(--black-color);
- 
+
+  margin-left: 0.8rem;
+  margin-right: 0.81rem;
+  border-radius: 1.1rem 1.4rem;
 }
-
-
 
 .hero-section .main-text {
   max-width: 60rem;
@@ -260,14 +220,8 @@ body {
   border: solid 0.4px #dd5c;
   border-radius: 11px 14px;
   background-color: rgba(153, 145, 27, 0.41);
-  bottom: 11.8rem ;
+  bottom: 11.8rem;
   left: 3.5rem;
-  
-}
-
-
-.color-overlay {
- 
 }
 
 .main-text h1 {
@@ -290,23 +244,25 @@ body {
     255,
     0.2
   ); /* Semi-transparent white background */
-  backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+
   color: var(--Green);
   max-width: 50vw;
   padding: 0 4rem 0 1rem;
 }
 
-
 .color-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgb(131,58,180);
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.1293767507002801) 33%, rgba(252,176,69,1) 100%);
-
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 0.1293767507002801) 33%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  border-radius: 1.1rem 1.4rem;
 }
-
-
 
 .service-list {
   display: flex;
@@ -316,7 +272,6 @@ body {
   background-repeat: no-repeat;
   margin: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 1em;
- 
 }
 
 .global-delivery img,
@@ -344,57 +299,51 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-content: center;
   width: 100%;
-  height: 30.05rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 .coal-card {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   background-color: rgba(54, 69, 79, 1.4);
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
   border-radius: 11px 14px;
- height: 540px;
- margin: 0.5px;
- max-width: 408px;
+
+  /* max-width: 408px;
+  height: 540px; */
 }
 
-.coal-card .coal-img {
-  height: 100vh;
-}
-
-
-.coal-img-section {
+.card-img-section {
   width: 100%;
+  height: 100%;
 }
 
 .honey-card {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   background-color: rgba(218, 165, 32, 1.2);
   background-repeat: no-repeat;
   position: relative;
-  overflow: hidden;
   border-radius: 11px 14px;
-  height: 540px;
   overflow: hidden;
-  margin: 0.5px;
-  max-width: 408px;
 }
 
-.honey-img-section .honey-img {
+/* .coal-img-section .coal-img {
   height: 540px;
   max-width: 408px;
-  /* max-width: 28.9rem; */
-}
+ 
+} */
 
 .Palm-oil-card {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  /* gap: 3rem;
+   align-content: space-between ; */
   background-color: rgba(234, 23, 1, 1);
   background-repeat: no-repeat;
   background-position: center;
@@ -402,15 +351,92 @@ body {
   overflow: hidden;
   border-radius: 11px 14px;
   filter: blur(0.5px);
-  max-width: 400px;
-  margin: 0.5px;
-  height: 540px;
 }
 
-.oil-img {
+.card .card-img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  height: 540px;
+.card {
+  box-shadow: 3px 3px 3px 3px var(--gray-color);
   max-width: 408px;
-  /* height: 19.9rem;
-  width: 28.9rem; */
+  height: 540px;
+  cursor: pointer;
+}
+
+.card .product-intro {
+  height: 100%;
+  width: 100%;
+  padding: 18px;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: rgba(49, 72, 114, 0.429);
+  filter: blur(0.1px);
+  top: 0;
+  right: 0;
+  border-radius: 15px;
+}
+
+.Palm-oil-card h3 {
+  color: var(--burnt-orange);
+  font-size: 1.5rem;
+  background: var(--white-color);
+  inline-size: 14rem;
+}
+
+.product-intro {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 2.5px;
+}
+
+.product-intro .card-title {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  max-height: 540px;
+  overflow: hidden;
+  gap: 1.4rem;
+}
+
+.product-list {
+  font-weight: 400;
+  font-size: 18px;
+  align-self: center;
+  color: var(--white-color);
+  list-style: none;
+}
+.coal-card h3 {
+  color: var(--charcoal);
+  font-size: 1.5rem;
+  background: var(--white-color);
+  inline-size: 6.5rem;
+}
+.coal-card p,
+.honey-card p,
+.Palm-oil-card p {
+  color: var(--white-color);
+}
+
+.honey-card h3 {
+  color: var(--light-Wood);
+  font-size: 1.5rem;
+  background: var(--white-color);
+  inline-size: 13.5rem;
+}
+
+.place-order {
+  color: var(--lavender-color);
+  background-color: var(--burnt-orange);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
 }
