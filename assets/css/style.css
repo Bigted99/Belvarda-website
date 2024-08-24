@@ -79,7 +79,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding-right: 25rem;
+  /* padding-right: 25rem; */
   padding-top: 0.3rem;
   color: var(--black-color);
 }
@@ -182,32 +182,18 @@ body {
   box-shadow: -20px 0 40px rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (max-width: 1440px) {
-  .big-mac {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
-  }
-
-  .big-mac .logo {
-    padding: 1rem 0 0 3rem;
-    margin: 1rem;
-  }
-}
-
 .hero-section {
-  background-image: url(../img/shipping.svg);
+  background-image: url(../img/scenic-mountains-landscape-after-rain-carpathians-ukraine.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: multiply;
-  height: 42.95rem;
+  height: 38rem;
   position: relative;
   border-bottom: solid 4px var(--black-color);
-
-  margin-left: 0.8rem;
-  margin-right: 0.81rem;
+  margin: 0 0.8rem;
+  /* margin-left: 0.8rem;
+  margin-right: 0.81rem; */
   border-radius: 1.1rem 1.4rem;
 }
 
@@ -217,35 +203,42 @@ body {
   overflow: hidden;
   position: absolute;
   font-family: "Roboto Slab", serif;
-  border: solid 0.4px #dd5c;
   border-radius: 11px 14px;
-  background-color: rgba(153, 145, 27, 0.41);
-  bottom: 11.8rem;
+  /* bottom: 11.8rem; */
+  top: 4rem;
   left: 3.5rem;
 }
 
 .main-text h1 {
   font-size: 3rem;
   text-transform: uppercase;
-  color: var(--red-color);
-  padding: 0 0 6.6rem 5.5rem;
+  color: var(--Periwinkle);
+  padding: 0 0 6.6rem 4.5rem;
   max-width: 50vw;
+  border-radius: 11px 11px 0 0;
+  background-color: rgba(153, 145, 27, 0.41);
+  border: solid 0.4px #dd5c;
 }
 
 .main-text p {
   font-size: 1.51rem;
   text-transform: uppercase;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: solid 0.4px #dd5c;
+  
+  /* border: 2px solid rgba(255, 255, 255, 0.2); */
   font-weight: 500;
-  border-radius: 11px 14px;
-  background-color: rgba(
+  border-radius: 0 0 11px 11px;
+  background-color: rgba(153, 145, 27, 0.41);
+  /* background-color: rgba(
     255,
     255,
     255,
     0.2
-  ); /* Semi-transparent white background */
+  );  */
+  
+  /* Semi-transparent white background */
 
-  color: var(--Green);
+  color: var(--Periwinkle);
   max-width: 50vw;
   padding: 0 4rem 0 1rem;
 }
@@ -254,14 +247,13 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 0.1293767507002801) 33%,
-    rgba(252, 176, 69, 1) 100%
+
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
   );
-  border-radius: 1.1rem 1.4rem;
 }
 
 .service-list {
@@ -306,16 +298,8 @@ body {
 }
 
 .coal-card {
-  /* display: flex;
-  flex-direction: column; */
   background-color: rgba(54, 69, 79, 1.4);
   background-repeat: no-repeat;
-  position: relative;
-  overflow: hidden;
-  border-radius: 11px 14px;
-
-  /* max-width: 408px;
-  height: 540px; */
 }
 
 .card-img-section {
@@ -324,32 +308,14 @@ body {
 }
 
 .honey-card {
-  /* display: flex;
-  flex-direction: column; */
   background-color: rgba(218, 165, 32, 1.2);
   background-repeat: no-repeat;
-  position: relative;
-  border-radius: 11px 14px;
-  overflow: hidden;
 }
 
-/* .coal-img-section .coal-img {
-  height: 540px;
-  max-width: 408px;
- 
-} */
-
 .Palm-oil-card {
-  /* display: flex;
-  flex-direction: column; */
-  /* gap: 3rem;
-   align-content: space-between ; */
   background-color: rgba(234, 23, 1, 1);
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
-  overflow: hidden;
-  border-radius: 11px 14px;
   filter: blur(0.5px);
 }
 
@@ -361,24 +327,39 @@ body {
 
 .card {
   box-shadow: 3px 3px 3px 3px var(--gray-color);
+  border-radius: 11px 14px;
+  border: 4px solid #232121;
   max-width: 408px;
   height: 540px;
   cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover .product-intro {
+  right: 0;
 }
 
 .card .product-intro {
   height: 100%;
   width: 100%;
-  padding: 18px;
+  padding: 0 18px;
   box-sizing: border-box;
   position: absolute;
   display: flex;
   flex-direction: column;
+  /* justify-content: space-between; */
+  justify-content: center;
   background: rgba(49, 72, 114, 0.429);
   filter: blur(0.1px);
   top: 0;
-  right: 0;
-  border-radius: 15px;
+  right: -100%;
+  transition: 2.5s;
+  border-radius: 11px 14px;
+
+    font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 2.5px;
 }
 
 .Palm-oil-card h3 {
@@ -388,19 +369,13 @@ body {
   inline-size: 14rem;
 }
 
-.product-intro {
-  font-weight: 600;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-}
 
 .product-intro .card-title {
   display: flex;
   flex-direction: column;
-  align-content: center;
   max-height: 540px;
   overflow: hidden;
-  gap: 1.4rem;
+  gap: 1.2rem;
 }
 
 .product-list {
@@ -433,10 +408,96 @@ body {
   color: var(--lavender-color);
   background-color: var(--burnt-orange);
   padding: 10px 20px;
+  width: 120px;
   border-radius: 5px;
   text-transform: capitalize;
   border: none;
   outline: none;
   font-weight: 500;
   cursor: pointer;
+  /* align-self: center; */
+}
+
+@media screen and (min-width: 1024px) {
+  .big-mac {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .big-mac .logo {
+    padding: 1rem 0 0 3rem;
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hamburger,
+  .toggle-menu {
+    display: block;
+  }
+
+  .big-mac {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header {
+    padding: 10px 10px;
+  }
+
+  .menu {
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    background: var(--gray-color);
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    padding-top: 68px;
+    z-index: calc(1);
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu li a,
+  .menu li a:hover {
+    padding: 30px;
+    font-size: 24px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+    inset: 0;
+  }
+
+  .hero-section .main-text{
+    left: 3rem;
+  }
+
+  .main-text{
+    max-width: 100%;
+    position: relative;
+  }
+
+  .main-text h1{
+    font-size: 1.5rem;
+  }
+
+  .main-text p{
+    max-width: 100%;
+    margin-right: 3rem;
+  }
+  .hero-content{
+    flex-direction: column;
+  }
+  .card{
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 558px) {
+  
 }
